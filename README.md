@@ -1,35 +1,24 @@
 # Mainstack Assessment
 
-Scaffolded Vite + React + TypeScript project with Vitest, Tailwind CSS and shadcn-style components.
-
-Quick start
-
-1. Install dependencies
-
-````bash
-# using npm
-npm install
-
- # Mainstack Assessment — Vite + React + TypeScript
-
 This repository is a Vite + React + TypeScript frontend scaffold used for a small assessment. It includes Tailwind CSS for styling, Vitest for testing, a small shadcn-style UI primitives set, React Query for data fetching, and a GitHub Actions workflow for CI/CD with Vercel deployment.
 
-This README is intentionally comprehensive — it covers local setup, development, testing, CI, deployment, architecture, and contribution guidelines.
+This README is intentionally comprehensive — it covers local setup, development, testing, architecture.
 
 --
 
 ## Quick start
 
 Requirements
-- Node.js 18+ (LTS recommended)
+
+- Node.js 22 (LTS recommended)
 - npm (or pnpm/yarn)
 - Vercel account (for deployment)
 
 Install dependencies:
 
 ```bash
-npm ci
-````
+npm install
+```
 
 Run dev server:
 
