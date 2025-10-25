@@ -1,0 +1,28 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BalanceCard > renders and matches snapshot 1`] = `
+<div>
+  <div
+    class="flex items-center gap-11 md:gap-16"
+  >
+    <div>
+      <p
+        class="text-sm text-muted-foreground font-medium mb-2"
+      >
+        Available
+      </p>
+      <p
+        class="text-4xl font-bold tracking-tight"
+      >
+        $1,234.56
+      </p>
+    </div>
+    <button
+      class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground hover:bg-primary/90 h-10 py-2 has-[>svg]:px-4 rounded-full px-8"
+      data-slot="button"
+    >
+      Withdraw
+    </button>
+  </div>
+</div>
+`;

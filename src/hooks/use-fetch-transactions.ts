@@ -32,28 +32,30 @@ export interface TransactionFilters {
   endDate?: string;
 }
 
-async function fetchTransactions(filters: TransactionFilters) {
-  const params = new URLSearchParams()
+export async function fetchTransactions(filters: TransactionFilters) {
+  const params = new URLSearchParams();
   Object.entries(filters).forEach(([key, value]) => {
-    if (value) params.append(key, value)
-  })
-  
-  const url = `${BASEURL}/transactions${params.toString() ? `?${params.toString()}` : ''}`
-  const response = await fetch(url)
-  
+    if (value) params.append(key, value);
+  });
+
+  const url = `${BASEURL}/transactions${
+    params.toString() ? `?${params.toString()}` : ""
+  }`;
+  const response = await fetch(url);
+
   if (!response.ok) {
-    throw new Error('Failed to fetch transactions')
+    throw new Error("Failed to fetch transactions");
   }
-  return response.json()
+  return response.json();
 }
 
 export function useFetchTransactions(filters: TransactionFilters = {}) {
   return useQuery<Transaction[]>({
-    queryKey: ['transactions', filters],
+    queryKey: ["transactions", filters],
     queryFn: () => fetchTransactions(filters),
     placeholderData: (previousData) => previousData, // Keep showing previous data
     staleTime: 1000 * 60 * 1, // Consider data fresh for 1 minute
     retry: 2, // Retry failed requests twice
-    refetchOnWindowFocus: false // Don't refetch when window regains focus
+    refetchOnWindowFocus: false, // Don't refetch when window regains focus
   });
 }
