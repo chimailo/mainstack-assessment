@@ -5,3 +5,7 @@ export { default as InsertChartIcon } from "./insert_chart";
 export { default as NotificationsIcon } from "./notifications";
 export { default as PaymentsIcon } from "./payments";
 export { default as WidgetsIcon } from "./widgets";
+export { default as AppbarIcon1 } from "./AppbarIcon1";
+export { default as AppbarIcon2 } from "./AppbarIcon2";
+export { default as AppbarIcon3 } from "./AppbarIcon3";
+export { default as AppbarIcon4 } from "./AppbarIcon4";

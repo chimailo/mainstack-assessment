@@ -1,11 +1,11 @@
-import { Link2, FileText, Briefcase, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AppbarIcon1, AppbarIcon2, AppbarIcon3, AppbarIcon4 } from "./icons";
 
 const sidebarItems = [
-  { icon: Link2 },
-  { icon: FileText },
-  { icon: Briefcase },
-  { icon: Lock },
+  { icon: AppbarIcon1 },
+  { icon: AppbarIcon2 },
+  { icon: AppbarIcon3 },
+  { icon: AppbarIcon4 },
 ];
 
 export function Sidebar() {
@@ -21,7 +21,7 @@ export function Sidebar() {
               size="icon"
               className="h-12 w-12 rounded-full text-muted-foreground hover:text-foreground hover:bg-accent"
             >
-              <Icon className="size-6" />
+              <Icon className="size-5" />
             </Button>
           );
         })}

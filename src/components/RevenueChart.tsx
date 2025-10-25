@@ -17,11 +17,12 @@ export function RevenueChart() {
         <LineChart data={data}>
           <XAxis
             dataKey="date"
-            axisLine={{ fill: "hsl(var(--muted-foreground))" }}
+            axisLine={{ stroke: "var(--muted-foreground)" }}
             tickLine={false}
-            tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+            tick={{ fill: "var(--muted-foreground)", fontSize: 12 }}
             tickFormatter={(value) => {
-              if (value.includes("Apr 1") || value.includes("Apr 30")) {
+              if (value.includes("Apr 1,") || value.includes("Apr 30")) {
+                console.log(value);
                 return value;
               }
               return "";
@@ -30,7 +31,7 @@ export function RevenueChart() {
           <Line
             type="natural"
             dataKey="value"
-            stroke="hsl(var(--chart-line))"
+            stroke="var(--chart-1)"
             strokeWidth={2}
             dot={false}
           />
