@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach } from "vitest";
+import { describe, it, expect, vi, beforeEach, Mock } from "vitest";
 import { fetchTransactions } from "../use-fetch-transactions";
 import { BASEURL } from "@/constants";
 
@@ -41,7 +41,7 @@ describe("fetchTransactions", () => {
     const data = await fetchTransactions(filters as any);
 
     expect(fetchMock).toHaveBeenCalledTimes(1);
-    const calledWith = (fetchMock as unknown as vi.Mock).mock
+    const calledWith = (fetchMock as unknown as Mock).mock
       .calls[0][0] as string;
     expect(calledWith).toContain("status=successful");
     expect(calledWith).toContain("type=deposit");
